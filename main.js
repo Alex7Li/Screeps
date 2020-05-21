@@ -3,7 +3,7 @@ let roleUpgrader = require('role.upgrader');
 let roleBuilder = require('role.builder');
 
 module.exports.loop = function () {
-    let harvesters = [...Game.creeps].filter((creep) => creep.memory.role === 'harvester');
+    let harvesters = _.filter(Game.creeps, (creep) => creep.memory.role === 'harvester');
     console.log('Harvesters: ' + harvesters.length);
 
     for (let name in Game.creeps) {
