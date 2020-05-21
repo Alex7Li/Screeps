@@ -1,10 +1,6 @@
 let roleHarvester = {
     /** @param {Creep} creep **/
     run: function (creep) {
-
-        let harvesters = Game.creeps.filter((creep) => creep.memory.role === 'harvester');
-        console.log('Harvesters: ' + harvesters.length);
-
         if (creep.store.getFreeCapacity() > 0) {
             let sources = creep.room.find(FIND_SOURCES);
             if (creep.harvest(sources[0]) === ERR_NOT_IN_RANGE) {
