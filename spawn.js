@@ -1,7 +1,6 @@
-export default class Spawn {
-    static run() {
+let spawnScript = {
+    run : function(){
         Object.keys(Game.spawns).forEach(function (name) {
-            Spawn.run(Game.spawns[name]);
             let harvesters = _.filter(Game.creeps, (creep) => creep.memory.role === 'harvester');
 
             if (harvesters.length < 2) {
@@ -23,4 +22,4 @@ export default class Spawn {
         });
     }
 }
-
+export default spawnScript;

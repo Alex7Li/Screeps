@@ -1,4 +1,4 @@
-import Spawn from '/spawn';
+let spawnScript = require('spawn');
 let roleHarvester = require('role.harvester');
 let roleUpgrader = require('role.upgrader');
 let roleBuilder = require('role.builder');
@@ -18,7 +18,7 @@ module.exports.loop = function () {
     /*
      * Create creeps if desired
      */
-    Spawn.run();
+    spawnScript.run();
 
     /*
      * Perform action for all creeps
