@@ -22,4 +22,4 @@ let spawnScript = {
         });
     }
 }
-export default spawnScript;
+module.exports = spawnScript;
