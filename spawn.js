@@ -1,6 +1,7 @@
 let spawnScript = {
     run : function(){
         Object.keys(Game.spawns).forEach(function (name) {
+            spawn = Game.spawns[spawn];
             let harvesters = _.filter(Game.creeps, (creep) => creep.memory.role === 'harvester');
 
             if (harvesters.length < 2) {
